@@ -21,7 +21,14 @@ set(SQLCIPHER_SRC
     ${SQLCIPHER_DIR}/sqlite3ext.h
 )
 
-add_library(${OUTPUT_LIB_NAME} STATIC ${SQLCIPHER_SRC})
+file(GLOB_RECURSE OpenSSL_DIR_SOURCE 
+    ${OpenSSL_DIR}/include/openssl/*.h
+    ${OpenSSL_DIR}/include/openssl/*.H
+)
+
+message(OpenSSL_DIR_SOURCE :${OpenSSL_DIR_SOURCE})
+
+add_library(${OUTPUT_LIB_NAME} STATIC ${SQLCIPHER_SRC} ${OpenSSL_DIR_SOURCE})
 
 
 target_link_directories(${OUTPUT_LIB_NAME} PRIVATE ${SSL_LIB_DIR})
@@ -54,6 +61,7 @@ target_compile_definitions(
         -DSQLITE_OS_WIN=1
         -DINCLUDE_MSVC_H=1
         -DWIN32_LEAN_AND_MEAN
+        -DOPENSSL_NO_DEPRECATED_1_1_0
 )
 
 
