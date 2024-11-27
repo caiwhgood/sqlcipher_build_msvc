@@ -19,7 +19,7 @@ copy .\build_x64\Release\*  .\output\x64\Release\
 mkdir build_X86
 cd build_X86
 del CMakeCache.txt
-cmake .. -G "Visual Studio 16 2019" -A Win32  -D_PLATFORM=X86
+cmake .. -G "Visual Studio 16 2019" -A Win32  -D_PLATFORM=x86
 cmake --build . --config Debug
 cmake --build . --config Release
 cd ..
