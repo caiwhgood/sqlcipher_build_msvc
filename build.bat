@@ -11,9 +11,12 @@ cmake --build . --config Release
 cd ..
 
 mkdir output\x64\Debug
-copy .\build_x64\Debug\*  .\output\x64\Debug\
+copy .\build_x64\Debug\*                    .\output\x64\Debug\
+copy .\3rd\OpenSSL\lib\x64\Debug\*          .\output\x64\Debug\
+
 mkdir output\x64\Release
-copy .\build_x64\Release\*  .\output\x64\Release\
+copy .\build_x64\Release\*                  .\output\x64\Release\
+copy .\3rd\OpenSSL\lib\x64\Release\*        .\output\x64\Release\
 
 
 mkdir build_X86
@@ -25,8 +28,11 @@ cmake --build . --config Release
 cd ..
 
 mkdir output\x86\Debug
-copy .\build_x86\Debug\*  .\output\x86\Debug\
+copy .\build_x86\Debug\*                    .\output\x86\Debug\
+copy .\3rd\OpenSSL\lib\x86\Debug\*          .\output\x86\Debug\
+
 mkdir output\x86\Release
-copy .\build_x86\Release\*  .\output\x86\Release\
+copy .\build_x86\Release\*                  .\output\x86\Release\
+copy .\3rd\OpenSSL\lib\x86\Release\*        .\output\x86\Release\
 
 pause

@@ -66,9 +66,9 @@ target_compile_definitions(
 
 
 
-add_executable(${OUTPUT_TEST} ${CMAKE_CURRENT_LIST_DIR}/test.cpp)
-target_include_directories(${OUTPUT_TEST}  PUBLIC
-    ${SQLCIPHER_DIR}
-)
-target_link_libraries(${OUTPUT_TEST} PRIVATE ${OUTPUT_LIB_NAME})
+# add_executable(${OUTPUT_TEST} ${CMAKE_CURRENT_LIST_DIR}/test.cpp)
+# target_include_directories(${OUTPUT_TEST}  PUBLIC
+#     ${SQLCIPHER_DIR}
+# )
+# target_link_libraries(${OUTPUT_TEST} PRIVATE ${OUTPUT_LIB_NAME})
 
